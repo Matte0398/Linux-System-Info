@@ -66,4 +66,4 @@ Network interfaces info =
   enp0s3     IP address: <INTERFACE_IP>
 ```
 
-Privacy note: In the example output, network interface IP addresses, external IP address and DNS server IP addresses have been replaced with placeholders to avoid exposing actual network details. The script reports the real values when run.
+**Privacy note:** In the example output, network interface IP addresses, external IP address and DNS server IP addresses have been replaced with placeholders to avoid exposing actual network details. The script reports the real values when run.
