@@ -1,4 +1,4 @@
-# Linux OS Info
+# Linux System Info
 
 Bash utility that collects and displays useful informations about a Linux system.
 
@@ -28,7 +28,7 @@ Bash utility that collects and displays useful informations about a Linux system
 ## Usage
 
 ```bash
-./GetLinuxOS.sh
+./Get-LinuxSystemInfo.sh
 ```
 
 ## Output
