@@ -1,8 +1,28 @@
-﻿# Linux System Info
+# Linux System Info
 
 [Get-LinuxSystemInfo.sh](Get-LinuxSystemInfo.sh) is a Bash utility that collects Linux system information and prints a colored report to the terminal. It does not change system configuration.
 
 Use it for troubleshooting, system inventory and monitoring support activities.
+
+## Contents
+
+- [Repository structure](#repository-structure)
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [Collected information](#collected-information)
+- [Example output](#example-output)
+- [Network behavior](#network-behavior)
+- [Limitations and troubleshooting](#limitations-and-troubleshooting)
+- [License](#license)
+
+## Repository structure
+
+```text
+Linux-System-Info/
+|-- Get-LinuxSystemInfo.sh
+|-- LICENSE
+`-- README.md
+```
 
 ## Requirements
 
@@ -100,15 +120,6 @@ The public IP lookup runs `wget -T 20 -qO- ipecho.net/plain`. This contacts an e
 - Filesystem utilization includes only `df` rows whose device starts with `/dev`; it is not a complete inventory of network or virtual filesystems. Block-device output filters lines containing `loop`.
 - Network output covers IPv4 and MAC addresses, not IPv6. MAC rows use the final field of the parsed line as their label, which may not identify the interface correctly.
 - The report is intended for human inspection. Exit codes do not provide a reliable overall health assessment, and there are no monitoring thresholds or JSON output.
-
-## Project layout
-
-```text
-Linux-System-Info/
-|-- Get-LinuxSystemInfo.sh
-|-- README.md
-`-- LICENSE
-```
 
 ## License
 
