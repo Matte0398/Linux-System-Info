@@ -1,11 +1,12 @@
 # Linux System Info
 
-[Get-LinuxSystemInfo.sh](Get-LinuxSystemInfo.sh) is a Bash utility that collects Linux system information and prints a colored report to the terminal. It does not change system configuration.
+[Get-LinuxSystemInfo.sh](Get-LinuxSystemInfo.sh) is a Bash utility that collects Linux system information and prints a report to the terminal. It does not change system configuration.
 
 Use it for troubleshooting, system inventory and monitoring support activities.
 
 ## Contents
 
+- [Features](#features)
 - [Repository structure](#repository-structure)
 - [Requirements](#requirements)
 - [Usage](#usage)
@@ -14,6 +15,18 @@ Use it for troubleshooting, system inventory and monitoring support activities.
 - [Network behavior](#network-behavior)
 - [Limitations and troubleshooting](#limitations-and-troubleshooting)
 - [License](#license)
+
+## Features
+
+- Display a system report directly in the terminal.
+- Identify the Linux distribution, kernel, architecture and package manager.
+- Report uptime, CPU details, memory, swap, load averages and logged-in users.
+- List block devices and filesystem utilization.
+- Show configured DNS servers, IPv4 addresses and MAC addresses.
+- Check Internet connectivity and retrieve the public IP address.
+- Collect information without changing system configuration.
+
+See [Collected information](#collected-information) for the fields included in each report section.
 
 ## Repository structure
 
@@ -119,7 +132,7 @@ The public IP lookup runs `wget -T 20 -qO- ipecho.net/plain`. This contacts an e
 - Memory reports the `free` column, rather than the `available` memory estimate.
 - Filesystem utilization includes only `df` rows whose device starts with `/dev`; it is not a complete inventory of network or virtual filesystems. Block-device output filters lines containing `loop`.
 - Network output covers IPv4 and MAC addresses, not IPv6. MAC rows use the final field of the parsed line as their label, which may not identify the interface correctly.
-- The report is intended for human inspection. Exit codes do not provide a reliable overall health assessment, and there are no monitoring thresholds or JSON output.
+- The report is intended for human inspection. Exit codes do not provide a reliable overall health assessment.
 
 ## License
 
